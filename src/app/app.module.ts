@@ -10,7 +10,7 @@ import { TicketsComponent } from './components/tickets/tickets.component';
 
 
 //material components
-import {MatSidenavModule} from '@angular/material';
+import {MatSidenavModule,MatToolbarModule} from '@angular/material';
 
 
 @NgModule({
@@ -24,7 +24,8 @@ import {MatSidenavModule} from '@angular/material';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatToolbarModule
 
   ],
   providers: [],
