@@ -1,0 +1,48 @@
+[33mcommit 1fd97f292b6843cb6ca32aaae1356e47b4027f5a[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: VinceX2 <vince.geek404@gmail.com>
+Date:   Fri Oct 26 02:53:28 2018 -0700
+
+    Agregando sidebar-menu
+
+[33mcommit 7962919679f0f3d9ec1b475c2b9cc6b3e41eae3e[m
+Merge: d9c826e 1d6ce53
+Author: VinceX2 <vince.geek404@gmail.com>
+Date:   Fri Oct 26 01:20:23 2018 -0700
+
+    Fix
+
+[33mcommit d9c826e923226af4b36b453fbfa221f22dd1f84a[m
+Author: VinceX2 <vince.geek404@gmail.com>
+Date:   Fri Oct 26 01:09:24 2018 -0700
+
+    Sidebar update
+
+[33mcommit 1d6ce53a2ae790de5c2d45bcf09edefedcffbe1c[m
+Author: jascky <jose.salgado@tectijuana.edu.mx>
+Date:   Fri Oct 26 00:55:46 2018 -0700
+
+    agregando bootstrap y navbar
+
+[33mcommit 93b84dca0a4da0551dd4b6e6880e54e1d2ee6e95[m
+Author: VinceX2 <vince.geek404@gmail.com>
+Date:   Fri Oct 26 00:07:23 2018 -0700
+
+    Agregado Materialconfig.ts
+
+[33mcommit c5a634ca0240e8b47ee27af85d0c3e5712a67e07[m
+Author: jascky <jose.salgado@tectijuana.edu.mx>
+Date:   Thu Oct 25 23:57:46 2018 -0700
+
+    mockups
+
+[33mcommit a02e4c9f189003736fa5bdecd207a994ee377103[m
+Author: jascky <jose.salgado@tectijuana.edu.mx>
+Date:   Thu Oct 25 19:18:07 2018 -0700
+
+    modificaciones toolbar
+
+[33mcommit 3149075c1d39c3ceae82e1520e889f4e49c48722[m
+Author: jascky <jose.salgado@tectijuana.edu.mx>
+Date:   Thu Oct 25 15:25:38 2018 -0700
+
+    primer commit mijas
