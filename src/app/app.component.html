@@ -18,10 +18,13 @@
             </mat-list-item>
         </mat-list>
 
-    </mat-sidenav>
-    <mat-sidenav-content>
-        <app-sidebar></app-sidebar>
-    </mat-sidenav-content>
-</mat-sidenav-container>
 
-<router-outlet></router-outlet>
+        <mat-sidenav-container class="example-container">
+            <mat-sidenav mode="side" opened>Sidenav content</mat-sidenav>
+            <mat-sidenav-content>
+                <app-navbar></app-navbar>
+
+            </mat-sidenav-content>
+        </mat-sidenav-container>
+
+        <router-outlet></router-outlet>
