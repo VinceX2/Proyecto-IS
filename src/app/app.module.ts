@@ -15,7 +15,7 @@ import { UsuariosComponent } from './components/usuarios/usuarios.component';
 import { TicketsComponent } from './components/tickets/tickets.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SidebarMenuComponent } from './components/sidebar-menu/sidebar-menu.component';
-
+import { ToolbarOptionsComponent } from './components/toolbar-options/toolbar-options.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,8 @@ import { SidebarMenuComponent } from './components/sidebar-menu/sidebar-menu.com
     UsuariosComponent,
     TicketsComponent,
     NavbarComponent,
-    SidebarMenuComponent
+    SidebarMenuComponent,
+    ToolbarOptionsComponent
   ],
   imports: [
     BrowserModule,
