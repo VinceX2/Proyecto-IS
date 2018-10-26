@@ -14,6 +14,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { UsuariosComponent } from './components/usuarios/usuarios.component';
 import { TicketsComponent } from './components/tickets/tickets.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { SidebarMenuComponent } from './components/sidebar-menu/sidebar-menu.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     SidebarComponent,
     UsuariosComponent,
     TicketsComponent,
-    NavbarComponent
+    NavbarComponent,
+    SidebarMenuComponent
   ],
   imports: [
     BrowserModule,
