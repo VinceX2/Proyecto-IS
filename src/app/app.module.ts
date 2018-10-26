@@ -13,6 +13,7 @@ import { MaterialModule } from './materialconfig';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { UsuariosComponent } from './components/usuarios/usuarios.component';
 import { TicketsComponent } from './components/tickets/tickets.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { TicketsComponent } from './components/tickets/tickets.component';
     AppComponent,
     SidebarComponent,
     UsuariosComponent,
-    TicketsComponent
+    TicketsComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
