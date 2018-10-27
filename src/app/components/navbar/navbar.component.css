@@ -11,8 +11,8 @@
 }
 
 mat-toolbar {
-    background: #ffffff;
-    border: 3px solid rgb(211, 207, 207);
+    background: #FEFEFE;
+    border: 1.5px solid rgb(211, 207, 207);
     border-radius: 5px;
 }
 
@@ -22,3 +22,4 @@ mat-toolbar {
 
 
 
+    
