@@ -3,7 +3,7 @@
         <h1>Lista de Tickets</h1>
         <mat-form-field>
             <mat-select placeholder="Estatus">
-                <mat-option *ngFor="let food of food" [value]="food.value">
+                <mat-option *ngFor="let food of foods" [value]="food.value">
                     {{food.viewValue}}
                 </mat-option>
             </mat-select>
