@@ -1,8 +1,12 @@
 <mat-sidenav-container class="example-container">
     <mat-sidenav mode="side" opened fixedInViewport="true">
-        <app-sidebar-menu></app-sidebar-menu>
+        <app-sidebar-menu>
+
+        </app-sidebar-menu>
     </mat-sidenav>
+    
     <app-navbar></app-navbar>
-    <app-sidebar></app-sidebar>
+    <!-- <app-sidebar></app-sidebar> -->
+    <router-outlet></router-outlet>
+
 </mat-sidenav-container>
-<router-outlet></router-outlet>

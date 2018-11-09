@@ -1,0 +1,39 @@
+mat-toolbar-row {
+    justify-content: space-around;
+}
+
+mat-form-field {
+    padding: 30px;
+    
+}
+
+
+mat-card {
+    padding: 20px;
+    margin: 30px;
+}
+
+.example-h2 {
+    margin: 10px;
+  }
+  
+  .example-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+  }
+  
+  .example-margin {
+    margin: 10px;
+  }
+
+  .example-header-image {
+    background-image: url('https://pbs.twimg.com/profile_images/972170159614906369/0o9cdCOp_400x400.jpg');
+    background-size: cover;
+  }
+
+  .example-header-image2 {
+    background-image: url('https://i.ytimg.com/vi/gz7IPTf1uts/maxresdefault.jpg');
+    background-size: cover;
+  }

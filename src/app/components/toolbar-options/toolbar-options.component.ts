@@ -13,9 +13,9 @@ export interface Food {
 })
 export class ToolbarOptionsComponent implements OnInit {
   foods: Food[] = [
-    { value: 'steak-0', viewValue: 'Steak' },
-    { value: 'pizza-1', viewValue: 'Pizza' },
-    { value: 'tacos-2', viewValue: 'Tacos' }
+    { value: 'steak-0', viewValue: 'En Proeso' },
+    { value: 'pizza-1', viewValue: 'Terminado' },
+    { value: 'tacos-2', viewValue: 'En espera' }
   ];
   constructor() { }
 
