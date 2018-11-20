@@ -19,6 +19,12 @@ import { ToolbarOptionsComponent } from './components/toolbar-options/toolbar-op
 import { SolicitudComponent } from './components/solicitud/solicitud.component';
 import { ConfigComponent } from './components/config/config.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
+import { RegistrationComponent } from './components/registration/registration.component';
+
+
+
+//Reactive Forms
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,13 +37,15 @@ import { PerfilComponent } from './components/perfil/perfil.component';
     ToolbarOptionsComponent,
     SolicitudComponent,
     ConfigComponent,
-    PerfilComponent
+    PerfilComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule
 
   ],
   providers: [],

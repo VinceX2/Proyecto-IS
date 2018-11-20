@@ -9,7 +9,7 @@ mat-card {
     margin: 30px;
 }
 
-.example-h2 {
+/* .example-h2 {
     margin: 10px;
   }
   
@@ -22,10 +22,5 @@ mat-card {
   
   .example-margin {
     margin: 10px;
-  }
+  } */
 
-  
-  mat-card {
-      padding: 20px;
-      margin: 30px;
-  }

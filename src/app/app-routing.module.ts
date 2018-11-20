@@ -4,12 +4,14 @@ import { SolicitudComponent } from './components/solicitud/solicitud.component';
 import { ConfigComponent } from './components/config/config.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { RegistrationComponent } from './components/registration/registration.component';
 
 const routes: Routes = [
   {path: 'solicitud' , component: SolicitudComponent},
   {path: 'config' , component: ConfigComponent},
   {path: 'perfil' , component: PerfilComponent},
-  {path: 'listaTickets' , component: SidebarComponent}
+  {path: 'listaTickets' , component: SidebarComponent},
+  {path: 'registrar' , component: RegistrationComponent}
 ];
 
 @NgModule({
@@ -17,4 +19,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [SolicitudComponent,ConfigComponent,PerfilComponent]
+export const routingComponents = [SolicitudComponent,ConfigComponent,PerfilComponent,RegistrationComponent]
