@@ -3,6 +3,10 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule , routingComponents} from './app-routing.module';
 import { AppComponent } from './app.component';
 
+// HTTP
+import { HttpClientModule } from '@angular/common/http';
+import { TicketService } from './services/ticket.service';
+
 // Angular Material Animations
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
@@ -21,11 +25,10 @@ import { ConfigComponent } from './components/config/config.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 
-
-
-//Reactive Forms
+// Reactive Forms
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormCrearTicketComponent } from './components/form-crear-ticket/form-crear-ticket.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -47,10 +50,11 @@ import { FormCrearTicketComponent } from './components/form-crear-ticket/form-cr
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    ReactiveFormsModule
-
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [TicketService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

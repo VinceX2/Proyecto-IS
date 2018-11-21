@@ -1,42 +1,76 @@
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-
-    <!--- Note that these columns can be defined in any order.
-        The actual rendered columns are set as a property on the row definition" -->
-
+<table [dataSource]="dataSource" mat-table class="mat-elevation-z8">
     <!-- Position Column -->
-    <ng-container matColumnDef="position">
-        <th mat-header-cell *matHeaderCellDef>TicketID</th>
-        <td mat-cell *matCellDef="let element"> {{element.position}} </td>
-    </ng-container>
-
     <!-- Name Column -->
     <ng-container matColumnDef="name">
         <th mat-header-cell *matHeaderCellDef> Nombre </th>
-        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        <td mat-cell *matCellDef="let ticket"> {{ticket.name}} </td>
     </ng-container>
 
     <!-- Weight Column -->
     <ng-container matColumnDef="depto">
         <th mat-header-cell *matHeaderCellDef> Departamento </th>
-        <td mat-cell *matCellDef="let element"> {{element.depto}} </td>
+        <td mat-cell *matCellDef="let ticket"> {{ticket.depto}} </td>
     </ng-container>
 
     <!-- Symbol Column -->
     <ng-container matColumnDef="service">
         <th mat-header-cell *matHeaderCellDef> Tipo/Servicio </th>
-        <td mat-cell *matCellDef="let element"> {{element.service}} </td>
+        <td mat-cell *matCellDef="let ticket"> {{ticket.service}} </td>
     </ng-container>
 
     <ng-container matColumnDef="date">
         <th mat-header-cell *matHeaderCellDef> Fecha </th>
-        <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+        <td mat-cell *matCellDef="let ticket"> {{ticket.date | date:'medium'}} </td>
     </ng-container>
 
     <ng-container matColumnDef="status">
         <th mat-header-cell *matHeaderCellDef> Status </th>
-        <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+        <td mat-cell *matCellDef="let ticket"> {{ticket.status}} </td>
     </ng-container>
 
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef> Actions </th>
+        <td mat-cell *matCellDef="let ticket">
+            <button (click)="editTickets(ticket)">Edit</button>
+            <button (click)="deleteTickets(ticket._id)">Delete</button>
+        </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedTickets"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedTickets;"></tr>
 </table>
+<div class="container">
+    <div class="row">
+        <div class="col s5">
+            <div class="card">
+                <div class="card-content">
+                    <form #ticketForm="ngForm" (ngSubmit)="addTicket(ticketForm)">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="ticketService.selectedTicket._id">
+                            </div>
+                            <div class="input-field col s12">
+                                <input type="text" name="name" #name="ngModel" [(ngModel)]="ticketService.selectedTicket.name" placeholder="Escribe tu nombre">
+                            </div>
+                            <div class="input-field col s12">
+                                <input type="text" name="depto" #depto="ngModel" [(ngModel)]="ticketService.selectedTicket.depto" placeholder="Escribe tu departamento">
+                            </div>
+                            <div class="input-field col s12">
+                                <input type="text" name="service" #service="ngModel" [(ngModel)]="ticketService.selectedTicket.service" placeholder="Escribe tu servicio">
+                            </div>
+                            <div class="input-field col s12">
+                                <input type="text" name="status" #status="ngModel" [(ngModel)]="ticketService.selectedTicket.status" placeholder="Escribe el status">
+                            </div>
+                            <div class="card-action">
+                                <div class="inputfield col s12">
+                                    <button>Save</button>
+                                    <button (click)="resetForm(ticketForm)">Clean</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
