@@ -53,6 +53,8 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule
+  ],entryComponents: [
+    FormCrearTicketComponent
   ],
   providers: [TicketService],
   bootstrap: [AppComponent]

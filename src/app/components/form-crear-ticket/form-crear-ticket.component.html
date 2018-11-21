@@ -1,11 +1,20 @@
-<h1 mat-dialog-title>Ingrese los campos {{data.asunto}}</h1>
+<h1 mat-dialog-title>Ticket nuevo {{data.asunto}}</h1>
 <div mat-dialog-content>
-  <p>What's your favorite animal?</p>
+  <p>Asunto:</p>
   <mat-form-field>
     <input matInput>
   </mat-form-field>
+
+  <p>Mensaje:</p>
+  <mat-form-field>
+      <textarea matInput></textarea>
+    </mat-form-field>
 </div>
 <div mat-dialog-actions>
-  <button mat-button (click)="onNoClick()">No Thanks</button>
-  <button mat-button [mat-dialog-close]="data.mensaje" cdkFocusInitial>Ok</button>
+  <button mat-button (click)="onNoClick()" >Cancelar</button>
+  <button mat-raised-button color="primary" [mat-dialog-close]="data.mensaje" cdkFocusInitial>Enviar</button>
 </div>
+
+
+
+
