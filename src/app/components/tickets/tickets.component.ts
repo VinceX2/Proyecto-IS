@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TicketService } from '../../services/ticket.service';
+
 export interface PeriodicElement {
   name: string;
   position: number;
@@ -30,12 +32,13 @@ const ELEMENT_DATA: PeriodicElement[] = [
 @Component({
   selector: 'app-tickets',
   templateUrl: './tickets.component.html',
-  styleUrls: ['./tickets.component.css']
+  styleUrls: ['./tickets.component.css'],
+  providers: [TicketService]
 })
 export class TicketsComponent implements OnInit {
   displayedColumns: string[] = ['position', 'name', 'depto', 'service', 'date', 'status'];
   dataSource = ELEMENT_DATA;
-  constructor() { }
+  constructor(private ticketService: TicketService ) { }
 
   ngOnInit() {
   }

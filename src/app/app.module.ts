@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule , routingComponents} from './app-routing.module';
 import { AppComponent } from './app.component';
 
+// HTTP
+import { HttpClientModule } from '@angular/common/http';
+
 // Angular Material Animations
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
@@ -21,9 +24,7 @@ import { ConfigComponent } from './components/config/config.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 
-
-
-//Reactive Forms
+// Reactive Forms
 import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
@@ -45,10 +46,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+    HttpClientModule,
     ReactiveFormsModule
-
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
