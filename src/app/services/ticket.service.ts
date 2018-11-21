@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-
 import { HttpClient} from '@angular/common/http';
 import { Ticket} from '../models/ticket';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,15 +9,15 @@ import { Ticket} from '../models/ticket';
 export class TicketService {
 
   selectedTicket: Ticket;
-  readonly URL_API = 'http://localhost:3000/api/tickets/';
+  private readonly URL_API = 'http://localhost:3000/api/tickets/';
   tickets: Ticket[];
 
   constructor(private http: HttpClient) {
     this.selectedTicket = new Ticket();
   }
 
-   getTickets(){
-     return this.http.get(this.URL_API);
+   getTickets(): Observable<Ticket[]> {
+     return this.http.get<Ticket[]>(this.URL_API);
    }
 
    postTickets(ticket: Ticket) {

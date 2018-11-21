@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 
 // HTTP
 import { HttpClientModule } from '@angular/common/http';
+import { TicketService } from './services/ticket.service';
 
 // Angular Material Animations
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -26,6 +27,7 @@ import { RegistrationComponent } from './components/registration/registration.co
 
 // Reactive Forms
 import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -47,9 +49,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     MaterialModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [TicketService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
