@@ -15,7 +15,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 })
 export class TicketsComponent implements OnInit {
   dataSource = new TicketDataSource(this.ticketService);
-  displayedTickets = ['name', 'depto', 'service', 'date', 'status', 'actions'];
+  displayedTickets = ['name', 'depto', 'asunto', 'date', 'status', 'actions'];
 
   constructor(
     private ticketService: TicketService,
@@ -32,10 +32,12 @@ export class TicketsComponent implements OnInit {
       duration: 3000
     });
   }
+
   resetDataSource() {
     this.getTickets();
     this.dataSource = new TicketDataSource(this.ticketService);
   }
+
   resetForm(form?: NgForm) {
     if (form) {
       form.reset();

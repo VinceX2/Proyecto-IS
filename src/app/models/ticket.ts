@@ -1,18 +1,20 @@
 export class Ticket {
 
-    constructor(_id = '', name = '', depto = '', service = '', date = null, status = '') {
+    constructor(_id = '', name = '', depto = '', asunto = '', message = '', date = null, status = '') {
 
         this._id = _id;
         this.name = name;
         this.depto = depto;
-        this.service = service;
+        this.asunto = asunto;
+        this.message = message;
         this.date = date;
         this.status = status;
     }
     _id: string;
     name: string;
     depto: string;
-    service: string;
+    asunto: string;
+    message: string;
     date: Date;
     status: string;
 }

@@ -10,7 +10,8 @@ ticketCtrl.createTicket = async(req, res) => {
     const createTicket = new TicketModel({
         name: req.body.name,
         depto: req.body.depto,
-        service: req.body.service,
+        asunto: req.body.asunto,
+        message: req.body.message,
         status: req.body.status
     });
     await createTicket.save();
@@ -29,9 +30,10 @@ ticketCtrl.editTicket = async(req, res) => {
     const newticket = {
         name: req.body.name,
         depto: req.body.depto,
-        service: req.body.service,
+        asunto: req.body.asunto,
+        message: req.body.message,
         date: new Date(),
-        status: req.body.status
+        status: 'Por atender'
     };
     await TicketModel.findByIdAndUpdate(id, { $set: newticket }, { new: true });
     res.json({

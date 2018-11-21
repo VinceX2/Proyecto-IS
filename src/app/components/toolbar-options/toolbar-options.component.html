@@ -1,20 +1,6 @@
 <mat-toolbar>
     <mat-toolbar-row>
         <h1>Lista de Tickets</h1>
-        <mat-form-field>
-            <mat-select placeholder="Estatus">
-                <mat-option *ngFor="let food of foods" [value]="food.value">
-                    {{food.viewValue}}
-                </mat-option>
-            </mat-select>
-        </mat-form-field>
-        <mat-form-field>
-            <mat-select placeholder="Fecha">
-                <mat-option *ngFor="let food of food" [value]="food.value">
-                    {{food.viewValue}}
-                </mat-option>
-            </mat-select>
-        </mat-form-field>
         <button mat-raised-button color="primary" (click)="openDialog()">Crear
         <mat-icon matListIcon>add</mat-icon>
         </button>
