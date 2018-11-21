@@ -14,19 +14,20 @@ import {MatInputModule} from '@angular/material/input';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatRadioModule} from '@angular/material/radio';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   imports: [
     MatSidenavModule, MatToolbarModule, MatIconModule,
     MatListModule, MatSelectModule, MatCardModule,
     MatButtonModule, MatTableModule,MatInputModule, MatSlideToggleModule, MatCheckboxModule,
-    MatRadioModule
+    MatRadioModule,MatDialogModule
   ],
   exports: [
     MatSidenavModule, MatToolbarModule, MatIconModule,
     MatListModule, MatSelectModule, MatCardModule,
     MatButtonModule, MatTableModule, MatInputModule, MatSlideToggleModule,MatCheckboxModule,
-    MatRadioModule
+    MatRadioModule,MatDialogModule
   ]
 })
 export class MaterialModule {}

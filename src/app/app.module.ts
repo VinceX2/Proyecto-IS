@@ -25,6 +25,7 @@ import { RegistrationComponent } from './components/registration/registration.co
 
 //Reactive Forms
 import { ReactiveFormsModule } from '@angular/forms';
+import { FormCrearTicketComponent } from './components/form-crear-ticket/form-crear-ticket.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     SolicitudComponent,
     ConfigComponent,
     PerfilComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    FormCrearTicketComponent
   ],
   imports: [
     BrowserModule,
