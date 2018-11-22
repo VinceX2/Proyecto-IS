@@ -16,7 +16,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatDialogModule} from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-
+import {MatGridListModule} from '@angular/material/grid-list';
 
 @NgModule({
   imports: [
@@ -24,13 +24,13 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatListModule, MatSelectModule, MatCardModule,
     MatButtonModule, MatTableModule,MatInputModule, MatSlideToggleModule, MatCheckboxModule,
     MatRadioModule,MatDialogModule,
-    MatSnackBarModule
+    MatSnackBarModule, MatDialogModule, MatGridListModule
   ],
   exports: [
     MatSidenavModule, MatToolbarModule, MatIconModule,
     MatListModule, MatSelectModule, MatCardModule,
     MatButtonModule, MatTableModule, MatInputModule, MatSlideToggleModule,MatCheckboxModule,
-    MatRadioModule,MatDialogModule
+    MatRadioModule,MatDialogModule, MatGridListModule
   ]
 })
 export class MaterialModule {}
