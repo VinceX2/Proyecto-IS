@@ -25,6 +25,7 @@ export class TicketsComponent implements OnInit {
 
   ngOnInit() {
     this.getTickets();
+    this.resetDataSource();
   }
 
   snackBarMessage(message: string) {
@@ -32,7 +33,7 @@ export class TicketsComponent implements OnInit {
       duration: 3000
     });
   }
-
+  
   resetDataSource() {
     this.getTickets();
     this.dataSource = new TicketDataSource(this.ticketService);

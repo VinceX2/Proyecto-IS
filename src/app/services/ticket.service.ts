@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
-import { Ticket} from '../models/ticket';
+import { Ticket } from '../models/ticket';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -15,7 +15,7 @@ export class TicketService {
   constructor(private http: HttpClient) {
     this.selectedTicket = new Ticket();
   }
-
+  
    getTickets(): Observable<Ticket[]> {
      return this.http.get<Ticket[]>(this.URL_API);
    }

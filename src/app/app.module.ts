@@ -53,10 +53,10 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule
-  ],entryComponents: [
+  ], entryComponents: [
     FormCrearTicketComponent
   ],
-  providers: [TicketService],
+  providers: [TicketService, TicketsComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

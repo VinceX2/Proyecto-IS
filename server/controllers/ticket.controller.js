@@ -25,6 +25,7 @@ ticketCtrl.getTicket = async(req, res) => {
     res.json(getTicket);
 };
 
+
 ticketCtrl.editTicket = async(req, res) => {
     const { id } = req.params;
     const newticket = {
@@ -48,4 +49,5 @@ ticketCtrl.deleteTicket = async(req, res) => {
         "status": "Ticket Deleted"
     });
 };
+
 module.exports = ticketCtrl;

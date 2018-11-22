@@ -1,20 +1,19 @@
-<h1 mat-dialog-title>Ticket nuevo {{data.asunto}}</h1>
-<div mat-dialog-content>
-  <p>Asunto:</p>
-  <mat-form-field>
-    <input matInput>
-  </mat-form-field>
-
-  <p>Mensaje:</p>
-  <mat-form-field>
-      <textarea matInput></textarea>
-    </mat-form-field>
-</div>
-<div mat-dialog-actions>
-  <button mat-button (click)="onNoClick()" >Cancelar</button>
-  <button mat-raised-button color="primary" [mat-dialog-close]="data.mensaje" cdkFocusInitial>Enviar</button>
-</div>
-
-
-
-
+<h1 mat-dialog-title>Ticket nuevo</h1>
+<form #ticketForm="ngForm">
+    <input type="hidden" name="name" [(ngModel)]="user">
+    <input type="hidden" name="depto" [(ngModel)]="depto">
+    <div mat-dialog-content>
+        <mat-form-field>
+            <input matInput type="text" name="asunto" ngModel placeholder="Asunto">
+        </mat-form-field>
+    </div>
+    <div mat-dialog-content>
+        <mat-form-field>
+            <textarea matInput type="text" name="message" ngModel placeholder="Mensaje"></textarea>
+        </mat-form-field>
+    </div>
+    <div mat-dialog-actions>
+        <button mat-button mat-dialog-close (click)="onCancel()">Cancelar</button>
+        <button mat-raised-button color="primary" (click)="onConfirm(ticketForm)">Guardar</button>
+    </div>
+</form>
