@@ -26,3 +26,33 @@ mat-sidenav-container {
        Every toolbar row uses a flexbox row layout. */
     flex: 1 1 auto;
 }
+
+mat-form-field {
+    padding: 30px;
+    
+}
+
+
+mat-card {
+    padding: 20px;
+    margin: 30px;
+}
+
+
+a {
+    float: left;
+    margin: 30px;
+}
+#lblogin{
+    padding-bottom:  30px;
+}
+
+
+#btnreg{
+    margin-left: 40px;
+}
+
+#btnlogin {
+    margin: 20px;
+    float: right;
+}
