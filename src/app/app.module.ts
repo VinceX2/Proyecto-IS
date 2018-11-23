@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 // HTTP
 import { HttpClientModule } from '@angular/common/http';
 import { TicketService } from './services/ticket.service';
+import { UserService } from './services/user.service';
+import { HttpModule } from '@angular/http';
 
 // Angular Material Animations
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -52,11 +54,11 @@ import { FormsModule } from '@angular/forms';
     MaterialModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
-  ], entryComponents: [
-    FormCrearTicketComponent
+    FormsModule,
+    HttpModule
   ],
-  providers: [TicketService, TicketsComponent],
+  entryComponents: [FormCrearTicketComponent],
+  providers: [TicketService, TicketsComponent, UserService, AppComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -29,6 +29,7 @@
         "cors": "^2.8.5",
         "express": "^4.16.4",
         "hammerjs": "^2.0.8",
+        "hyper-tab-icons": "^2.1.0",
         "jquery": "^3.3.1",
         "material-design-icons": "^3.0.1",
         "mongoose": "^5.3.12",

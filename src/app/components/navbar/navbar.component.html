@@ -3,7 +3,9 @@
         <h1>Sistema de control de solicitud de servicios</h1>
         <span class="example-spacer"></span>
         <mat-icon matListIcon class="example-icon">notifications</mat-icon>
-        <span class="profile">Antonio</span>
+        <span class="profile">{{user.first_name}}</span>
         <mat-icon matListIcon class="example-icon">account_circle</mat-icon>
+        <span></span>
+        <a (click)="logOut()">Log Out</a>
     </mat-toolbar-row>
 </mat-toolbar>

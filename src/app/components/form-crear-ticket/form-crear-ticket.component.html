@@ -1,7 +1,7 @@
 <h1 mat-dialog-title>Ticket nuevo</h1>
 <form #ticketForm="ngForm">
-    <input type="hidden" name="name" [(ngModel)]="user">
-    <input type="hidden" name="depto" [(ngModel)]="depto">
+    <input type="hidden" name="name" [(ngModel)]="user.first_name">
+    <input type="hidden" name="depto" [(ngModel)]="user.job">
     <div mat-dialog-content>
         <mat-form-field>
             <input matInput type="text" name="asunto" ngModel placeholder="Asunto">

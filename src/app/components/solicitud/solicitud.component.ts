@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TicketService } from '../../services/ticket.service';
 import { Ticket } from '../../models/ticket';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-solicitud',
@@ -8,18 +9,25 @@ import { Ticket } from '../../models/ticket';
   styleUrls: ['./solicitud.component.css']
 })
 export class SolicitudComponent implements OnInit {
-  name = 'Vicente';
-  constructor(private ticketService: TicketService) { }
+  
+  userLoggedIn: string;
+  
+  constructor(
+    private ticketService: TicketService,
+    private userService: UserService
+  ) {}
 
   ngOnInit() {
     this.getTickets();
+    this.userLoggedIn = this.userService.getNameUserLoggedIn();
   }
 
   getTickets() {
-    this.ticketService.getTickets()
-    .subscribe(res => {
+    this.ticketService.getTickets().subscribe(res => {
       this.ticketService.tickets = res as Ticket[];
     });
   }
+
+  
 
 }

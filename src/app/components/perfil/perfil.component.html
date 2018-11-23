@@ -1,41 +1,39 @@
 <mat-card>
-  <mat-card-content>
-    <h2 class="example-h2">Perfil</h2>
-
-    <section class="example-section">
+    <mat-card-content>
+        <h2 class="example-h2">Perfil</h2>
 
 
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="Nombre" value="Antonio">
-      </mat-form-field>
 
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="Apellido" value="Salgado">
-      </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="No. de Empleado" [(ngModel)]="user.numEmp">
+        </mat-form-field>
 
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Nombre" [(ngModel)]="user.first_name">
+        </mat-form-field>
 
-      <br>
-
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="No. de Empleado" value="022">
-      </mat-form-field>
-
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="Departamento" value="IT">
-      </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Apellido" [(ngModel)]="user.last_name">
+        </mat-form-field>
 
 
-      <br>
+
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Email" [(ngModel)]="user.email">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Password">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Departamento" [(ngModel)]="user.depto">
+        </mat-form-field>
 
 
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="Puesto" value="Especialista">
-      </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Puesto" [(ngModel)]="user.job">
+        </mat-form-field>
 
-
-    </section>
-
-  </mat-card-content>
+    </mat-card-content>
 </mat-card>
-
-

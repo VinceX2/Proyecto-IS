@@ -6,7 +6,7 @@
 <mat-divider></mat-divider>
 
 <div *ngFor="let ticket of ticketService.tickets">
-    <mat-card class="result" *ngIf="ticket.name == 'Vicente'">
+    <mat-card class="result" *ngIf="ticket.name == userLoggedIn">
         <mat-card-header>
             <div mat-card-avatar class="example-header-image2"></div>
             <mat-card-title>{{ticket.name}}</mat-card-title>

@@ -6,6 +6,8 @@ import { MatSnackBar } from '@angular/material';
 import { DataSource } from '@angular/cdk/collections';
 import { Observable } from 'rxjs';
 import { MatDialogModule } from '@angular/material/dialog';
+import { AppComponent } from '../../app.component';
+
 
 @Component({
   selector: 'app-tickets',
@@ -15,25 +17,24 @@ import { MatDialogModule } from '@angular/material/dialog';
 })
 export class TicketsComponent implements OnInit {
   dataSource = new TicketDataSource(this.ticketService);
-  displayedTickets = ['name', 'depto', 'asunto', 'date', 'status', 'actions'];
+  displayedTickets = ['name', 'depto', 'asunto', 'date', 'status'];
 
   constructor(
     private ticketService: TicketService,
     private snackBar: MatSnackBar,
-    private dialog: MatDialogModule
+    private dialog: MatDialogModule,
+    private app: AppComponent
   ) {}
 
   ngOnInit() {
     this.getTickets();
     this.resetDataSource();
   }
-
   snackBarMessage(message: string) {
     this.snackBar.open(message, 'Cerrar', {
       duration: 3000
     });
   }
-  
   resetDataSource() {
     this.getTickets();
     this.dataSource = new TicketDataSource(this.ticketService);
@@ -61,6 +62,7 @@ export class TicketsComponent implements OnInit {
           this.snackBarMessage('Ticket Guardado');
           this.resetDataSource();
         });
+        
     }
   }
 
@@ -82,6 +84,8 @@ export class TicketsComponent implements OnInit {
       });
     }
   }
+
+  
 }
 
 export class TicketDataSource extends DataSource<any> {

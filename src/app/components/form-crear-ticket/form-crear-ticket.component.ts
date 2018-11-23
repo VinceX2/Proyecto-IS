@@ -2,8 +2,10 @@ import { Component, OnInit} from '@angular/core';
 import {MatDialogRef} from '@angular/material';
 import { TicketsComponent, TicketDataSource } from '../tickets/tickets.component';
 import { TicketService } from '../../services/ticket.service';
+import { UserService } from '../../services/user.service';
 import { NgForm } from '@angular/forms';
 import { MatSnackBar } from '@angular/material';
+import { User } from '../../models/user';
 
 @Component({
   selector: 'app-form-crear-ticket',
@@ -11,17 +13,19 @@ import { MatSnackBar } from '@angular/material';
   styleUrls: ['./form-crear-ticket.component.css']
 })
 export class FormCrearTicketComponent implements OnInit {
-  user = 'Vicente';
-  depto = 'IT';
-
+  
+  user: User;
   constructor(
     public dialogRef: MatDialogRef<FormCrearTicketComponent>,
     private ticketComponent: TicketsComponent,
     public ticketService: TicketService,
-    private snackBar: MatSnackBar
+    private snackBar: MatSnackBar,
+    private userservice: UserService
   ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.user = this.userservice.getUserLoggedIn();
+  }
 
   snackBarMessage(message: string) {
     this.snackBar.open(message, 'Cerrar', {
