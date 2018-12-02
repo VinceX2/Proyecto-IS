@@ -4,19 +4,19 @@
         <section class="example-section">
             <form [formGroup]="myForm" (ngSubmit)="registerUser(firstname.value, lastname.value, numEmp.value, job.value, depto.value, email.value, password.value)">
                 <mat-form-field>
-                    <input matInput placeholder="nombre" formControlName="firstname" autocomplete="off">
+                    <input matInput placeholder="Nombre" formControlName="firstname" autocomplete="off">
                 </mat-form-field>
 
                 <mat-form-field>
-                    <input matInput placeholder="apellido" formControlName="lastname" autocomplete="off">
+                    <input matInput placeholder="Apellido" formControlName="lastname" autocomplete="off">
                 </mat-form-field>
                 <br>
                 <mat-form-field>
-                    <input matInput placeholder="numero de empleado" formControlName="numEmp" autocomplete="off">
+                    <input matInput placeholder="Numero de Empleado" formControlName="numEmp" autocomplete="off">
                 </mat-form-field>
 
                 <mat-form-field>
-                    <input matInput placeholder="puesto" formControlName="job" autocomplete="off">
+                    <input matInput placeholder="Puesto" formControlName="job" autocomplete="off">
                 </mat-form-field>
 
                 <mat-form-field>
@@ -30,7 +30,7 @@
                 <br>
 
                 <mat-form-field>
-                    <input matInput placeholder="email" formControlName="email" autocomplete="off">
+                    <input matInput placeholder="Email" formControlName="email" autocomplete="off">
 
                     <mat-error *ngIf="email.invalid && email.touched" class="has-text-danger">
                         Ingrese un correo valido...
@@ -39,7 +39,7 @@
                 </mat-form-field>
 
                 <mat-form-field>
-                    <input matInput type="password" placeholder="password" formControlName="password" autocomplete="new-password">
+                    <input matInput type="password" placeholder="Password" formControlName="password" autocomplete="new-password">
 
                     <mat-error *ngIf="email.invalid && email.touched" class="has-text-danger">
                         Ingrese una contraseña valida...
@@ -74,7 +74,7 @@
                     <form [formGroup]="myForm" (ngSubmit)="login(email.value, password.value, $event)">
                         <hr>
                         <mat-form-field>
-                            <input matInput placeholder="email" formControlName="email" autocomplete="off">
+                            <input matInput placeholder="Email" formControlName="email" autocomplete="off">
 
                             <mat-error *ngIf="email.invalid && email.touched" class="has-text-danger">
                                 Ingrese un correo valido...
@@ -83,7 +83,7 @@
                         </mat-form-field>
 
                         <mat-form-field>
-                            <input matInput type="password" placeholder="password" formControlName="password" autocomplete="new-password">
+                            <input matInput type="password" placeholder="Password" formControlName="password" autocomplete="new-password">
 
                             <mat-error *ngIf="email.invalid && email.touched" class="has-text-danger">
                                 Ingrese una contraseña valida...
